@@ -150,12 +150,58 @@ npm run preview
 
 ## 🌐 Deployment
 
-### Option 1: GitHub Pages (Automated)
+### ⚡ Option 1: Netlify (Recommended - Easiest)
+
+1. **Push code to GitHub**
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+2. **Go to [netlify.com](https://netlify.com)**
+   - Click "New site from Git"
+   - Select GitHub and authorize
+   - Choose your repository
+
+3. **Configure Build Settings**
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - Click "Deploy site"
+
+4. **Done!** Your site is live automatically. Every push deploys instantly.
+
+**Features:**
+- ✅ Free hosting
+- ✅ Auto-deploy on git push
+- ✅ HTTPS by default
+- ✅ Custom domain support
+- ✅ Environment variables
+
+### Option 2: Vercel
+
+1. **Push code to GitHub**
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+2. **Go to [vercel.com](https://vercel.com)**
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel auto-detects Vite settings
+   - Click "Deploy"
+
+3. **Done!** Site is live at `your-project.vercel.app`
+
+### Option 3: GitHub Pages
 
 1. **Update `vite.config.js`**
 ```javascript
 export default defineConfig({
-  base: '/your-repo-name/', // ← Change this to your repo name
+  plugins: [react()],
+  base: '/your-repo-name/', // ← Match your repo name exactly!
 })
 ```
 
@@ -168,41 +214,16 @@ git push origin main
 
 3. **Enable GitHub Pages**
    - Go to repo Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: `gh-pages` → `/root`
-   - Save
+   - Source: GitHub Actions
+   - Wait 2-3 minutes
 
-4. **Deploy manually (first time)**
-```bash
-npm run deploy
-```
-
-5. **Automatic Deployment** - Every push to `main` auto-deploys via GitHub Actions!
-
-Your site will be live at: `https://yourusername.github.io/your-repo-name/`
-
-### Option 2: Vercel (Easiest)
-
-1. Push code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Deploy! (automatically configured for Vite)
-
-### Option 3: Netlify
-
-1. Push code to GitHub
-2. Go to [netlify.com](https://netlify.com)
-3. "New site from Git"
-4. Select your repository
-5. Build command: `npm run build`
-6. Publish directory: `dist`
-7. Deploy!
+4. **Site live at:** `https://yourusername.github.io/your-repo-name/`
 
 ## 📁 Project Structure
 
 ```
 DevPortfolio/
-├── public/              # Static assets
+├── public/              # Static assets and redirects
 ├── src/
 │   ├── components/      # React components
 │   │   ├── Navbar/
@@ -222,9 +243,10 @@ DevPortfolio/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml    # GitHub Pages auto-deploy
+├── netlify.toml         # Netlify configuration
 ├── index.html
 ├── package.json
-├── vite.config.js       # ← Update base URL here
+├── vite.config.js       # Vite config (base: "/")
 └── README.md
 ```
 
@@ -239,19 +261,29 @@ DevPortfolio/
 
 ## 🐛 Troubleshooting
 
-### GitHub Pages shows blank page
+### Netlify MIME Type Error
+
+**Error:** `Failed to load module script: Expected a JavaScript-or-Wasm module script...`
+
+**Solution:** Already fixed! Files include:
+- ✅ `netlify.toml` - Proper build config
+- ✅ `public/_redirects` - SPA routing
+- ✅ `vite.config.js` with `base: "/"` for Netlify
+
+### GitHub Pages Blank Page
 
 1. Check `vite.config.js` - ensure `base` matches your repo name
-2. Ensure `gh-pages` branch exists
+2. Verify `gh-pages` branch exists
 3. Check Settings → Pages → Source is set to `gh-pages`
 
-### Animations not working
+### Animations Not Working
 
-- Check browser compatibility
+- Clear browser cache
+- Check browser compatibility (Chrome, Firefox, Safari all supported)
 - Disable browser extensions that block animations
-- Check console for Framer Motion errors
+- Check console for errors
 
-### Build fails
+### Build Fails
 
 ```bash
 # Clear cache and reinstall
@@ -260,9 +292,16 @@ npm install
 npm run build
 ```
 
+### Port Already in Use
+
+```bash
+# Use different port
+npm run dev -- --port 3000
+```
+
 ## 🤝 Contributing
 
-This is a personal portfolio template, but feel free to:
+This is a personal portfolio template, feel free to:
 - Fork for your own use
 - Submit issues for bugs
 - Suggest improvements via pull requests
