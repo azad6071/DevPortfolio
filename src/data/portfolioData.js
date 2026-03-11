@@ -175,7 +175,7 @@ export const portfolioData = {
   // ====================================
   social: {
     github: "https://github.com/azad6071",
-    linkedin: "https://linkedin.com/in/azad-kumar-dakshanax",
+    linkedin: "https://linkedin.com/in/azad-kumar-dakshana",
     twitter: "https://x.com/AzadKum85999627",
     // Optional: Add more social links
     // instagram: "https://instagram.com/yourusername",
