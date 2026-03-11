@@ -110,22 +110,21 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "ZipLink",
       description:
-        "A full-featured online shopping platform with real-time inventory management, payment integration, and admin dashboard. Built for scalability and performance.",
-      techStack: ["React", "Node.js", "MongoDB", "Stripe", "AWS S3", "Redis"],
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
-      liveUrl: "https://your-ecommerce-demo.com",
+        "URL Shortner",
+      techStack: ["Spring Boot", "Java", "Postgres", "React", "Redis"],
+      githubUrl: "https://github.com/azad6071/url-shortner",
       featured: true,
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "Byte Forge",
       description:
-        "Collaborative project management tool with drag-and-drop interface, real-time updates, and team collaboration features. Think Trello meets Notion.",
-      techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Socket.io"],
-      githubUrl: "https://github.com/yourusername/task-manager",
-      liveUrl: "https://your-taskmanager-demo.com",
+        "Dev Portfolio",
+      techStack: ["React", "Vue", "CSS"],
+      githubUrl: "https://github.com/azad6071/DevPortfolio/tree/develop",
+      liveUrl: "https://azad-dev-portfolio.netlify.app/",
       featured: true,
     },
     {
