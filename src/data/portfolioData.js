@@ -38,6 +38,13 @@ export const portfolioData = {
       "SQL",
       "HTML/CSS",
     ],
+    backend: [
+      "Spring Boot",
+      "PostgreSQL",
+      "MongoDB",
+      "REST APIs",
+      "Node.js"
+    ],
     frontend: [
       "React",
       "Next.js",
@@ -45,13 +52,6 @@ export const portfolioData = {
       "Redux",
       "Material-UI",
       "High Charts",
-    ],
-    backend: [
-      "Spring Boot",
-      "PostgreSQL",
-      "MongoDB",
-      "REST APIs",
-      "Node.js"
     ],
     tools: [
       "Git",
@@ -77,7 +77,7 @@ export const portfolioData = {
         "Led development of a microservices architecture serving 100K+ daily users",
         "Optimized application performance, reducing load time by 40%",
         "Mentored 3 junior developers and conducted code reviews",
-        "Implemented CI/CD pipelines using GitHub Actions and Docker",
+        "Enterprise Authentication: Owned end-to-end Ping Identity SSO integration across React and Spring Boot, implementing OAuth 2.0 for secure single sign-on, role-based access control, and scalable enterprise authentication",
       ],
     },
     {
@@ -87,10 +87,8 @@ export const portfolioData = {
       duration: "May 2023 - July 2023",
       location: "Remote",
       responsibilities: [
-        "Built and deployed 5+ production-ready web applications using MERN stack",
-        "Collaborated with design team to implement pixel-perfect UI/UX",
-        "Integrated third-party APIs including Stripe, Twilio, and SendGrid",
-        "Reduced bug reports by 60% through comprehensive testing strategies",
+        "Analyzed NFC protocol specifications and Android integration workflows, delivering structured documentation to support the design of contactless payment features.",
+        "Built a Kotlin-based Android application integrating REST APIs (NewsAPI) to deliver real-time news, gaining hands-on experience with mobile architecture and API-driven design."
       ],
     },
     {
@@ -98,12 +96,10 @@ export const portfolioData = {
       company: "KlearVision Pvt. Ltd.",
       role: "Research Intern",
       duration: "Dec 2021 - Feb 2022",
-      location: "New York, NY",
+      location: "IIT Kharagpur",
       responsibilities: [
-        "Developed responsive web interfaces using React and TypeScript",
-        "Implemented state management solutions with Redux and Context API",
-        "Improved website accessibility (WCAG 2.1 AA compliance)",
-        "Collaborated in Agile/Scrum environment with weekly sprints",
+        "Implemented CUDA-based matrix multiplication, reducing computation time by 90% for large-scale parallel operations",
+        "Developed an edge detection system using OpenCV (C++) for images & video streams enabling efficient feature extraction"
       ],
     },
   ],
@@ -178,9 +174,9 @@ export const portfolioData = {
   // SOCIAL LINKS
   // ====================================
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
+    github: "https://github.com/azad6071",
+    linkedin: "https://linkedin.com/in/azad-kumar-dakshanax",
+    twitter: "https://x.com/AzadKum85999627",
     // Optional: Add more social links
     // instagram: "https://instagram.com/yourusername",
     // medium: "https://medium.com/@yourusername",
